@@ -18,13 +18,13 @@ class AlgoTest {
     public void sameSize() {
         SortDemoData data = new SortDemoData();
         data.initializeArray("2 3 4");
-        Item[] copyOfMyArray = new Item[data.myArray.length];
+        Item[] copyOfMyArray = new Item[data.getArray().length];
         System.arraycopy(
-                data.myArray, 0, copyOfMyArray, 0, data.myArray.length);
+                data.getArray(), 0, copyOfMyArray, 0, data.getArray().length);
         
-        SortAlgos.bubbleSort(data.myArray);
+        SortAlgos.bubbleSort(data.getArray());
         
-        assertTrue(data.myArray.length == copyOfMyArray.length);
+        assertTrue(data.getArray().length == copyOfMyArray.length);
     }
     
     /**
